@@ -1,5 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-
-createApp(App).use(router).mount("#app");
+import dayjs from "dayjs";
+import weekday from "dayjs/plugin/weekday";
+dayjs.extend(weekday);
+createApp(App).use(router).use(dayjs).mount("#app");
